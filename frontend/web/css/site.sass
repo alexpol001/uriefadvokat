@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&display=swap')
+@import "common.sass"
+
+body
+  font-family: 'Open Sans', sans-serif
+  font-size: 14px
+  overflow-x: hidden
+  a
+    color: #ffffff
+    @include crossBrowser(transition, .2s)
+    &:focus, &:active, &:hover
+      color: #ffffff
+
+.has-error
+  .help-block
+    color: #ffffff
+
+.scrollup
+  transition: none
+  z-index: 1000
+  width: 40px
+  height: 40px
+  opacity: 0.6
+  position: fixed
+  top: 100px
+  left: 50px
+  display: none
+  border-radius: 50%
+  color: #fff
+  text-align: center
+  font-size: 2.5em
+  background-color: #000
+  line-height: 40px
+  i
+    display: inline-block
+    vertical-align: top
+  &:hover, &:active, &:focus
+    color: #fff
+  &:hover
+    background-color: #e52e2e
+    opacity: 1
+
+section
+  padding: 40px 0
+  text-align: center
+  h2
+    font-weight: 600
+    font-size: 2.2em
+    margin-top: 0
+    margin-bottom: 30px
+    @media screen and (max-width: 480px)
+      font-size: 1.8em
+
+
+.online-order
+  color: #ffffff
+  font-weight: 600
+  background: #e52e2e
+  border-radius: 10px
+  padding: 10px 20px
+  font-size: 1.14em
+  display: inline-block
+  margin: 0 auto
+  &:focus, &:active, &:hover
+    text-decoration: none
+    background: #f31515
+  &.big-button
+    font-size: 1.7em
+    padding: 12px 30px
+    border-radius: 15px
+    @media screen and (max-width: 480px)
+      font-size: 1.2em
+      padding-left: 15px
+      padding-right: 15px
+
+.order-form
+  max-width: 460px
+  background: #333333
+  color: #ffffff
+  border-radius: 15px
+  padding: 15px
+  h3
+    font-weight: 600
+    font-size: 1.14em
+    line-height: 1.25
+    padding-bottom: 10px
+  form
+    padding: 0 10px
+    .form-control
+      padding: 8px 15px
+      border-radius: 10px
+      font-weight: 600
+      height: auto
+      outline: 0
+      @include crossBrowser(box-shadow, none)
+      border: none
+      font-size: 1.14em
+    .online-order
+      width: 100%
+      border: none
+      padding-top: 5px
+      padding-bottom: 5px
+      .main-title, .sub-title
+        display: block
+      .main-title
+        font-size: 1.2em
+      .sub-title
+        font-size: 0.9em
+    .instruction
+      text-align: center
+
+header, footer
+  padding: 15px 0 20px
+  .title
+    float: left
+    .logo
+      float: left
+      margin-right: 30px
+      @media screen and (max-width: 480px)
+        margin-right: 15px
+    .name
+      float: left
+      p, h1, .h1
+        margin: 0
+        padding: 5px 0
+        font-size: inherit
+        font-weight: 600
+  .call
+    @media screen and (max-width: 480px)
+      font-size: 10px
+    float: right
+    font-weight: 600
+    text-align: right
+    .phone
+      margin-bottom: 5px
+      .number, i.fa, .whatsapp
+        display: inline-block
+        vertical-align: middle
+      .number
+        font-size: 1.57em
+        margin-left: 7px
+      .whatsapp
+        margin-right: 7px
+      i.fa
+        font-size: 2.14em
+
+
+footer
+  border-top: 1px solid #929292
+  color: #595959
+  @media screen and (max-width: 767px)
+    text-align: center
+    .call, .title
+      text-align: inherit
+      float: none
+      .logo
+        float: none
+  .copyright
+    margin-top: 15px
+  .politics
+    font-weight: 600
+    text-align: center
+    a
+      margin: 7px 0
+      color: #00a8ff
+      display: block
+      &.email
+        color: inherit
+      &:focus, &:active, &:hover
+        text-decoration: underline
+    .developer
+      margin-top: 17px
+      a
+        margin: 0
+        display: inline
+        color: inherit
+
+
+section.about
+  background: #ffffff url("../img/about-bg.jpg") no-repeat 50%
+  background-size: cover
+  position: relative
+  padding-bottom: 0
+  @media screen and (max-width: 991px)
+    padding-bottom: 40px
+  .welcome
+    max-width: 710px
+    .person
+      position: absolute
+      bottom: 0
+      img
+        width: 300px
+        height: auto
+    .description
+      float: right
+      @media screen and (max-width: 1199px)
+        float: none
+      h2
+        margin: 10px 0 15px 0
+        padding-top: 15px
+      .name
+        font-size: 1.71em
+        margin: 10px 0
+        line-height: 1.25
+      .experience
+        margin: 30px 0 25px 0
+        font-size: 1.29em
+      .speaker
+        margin-top: 50px
+        font-size: 1.14em
+        color: #ffffff
+        font-weight: 600
+        background: url("../img/comment.png") no-repeat
+        background-size: contain
+        padding: 20px 20px 50px 20px
+        width: 330px
+        display: inline-block
+        @media screen and (max-width: 767px)
+          margin-top: 20px
+      .confidence
+        margin-top: 40px
+        span, i
+          display: inline-block
+          vertical-align: middle
+        i
+          font-size: 1.29em
+          margin-left: 5px
+          color: #33c500
+      .to-down
+        display: block
+        color: #333333
+        font-size: 3.42em
+        margin: 0 0 40px 0
+        &:hover
+          color: #e52e2e
+  .order-form
+    @media screen and (max-width: 767px)
+      margin: 20px auto 0
+    h3
+      border-bottom: 1px solid #ff0000
+    .instruction
+      text-align: center
+      margin-bottom: 20px
+    .limit
+      font-size: 1.15em
+      font-weight: 600
+      margin-top: 10px
+
+
+section.service
+  .service-list
+    margin-bottom: 20px
+  .service-item
+    border: 1px solid #d4d4d4
+    border-radius: 15px
+    margin-bottom: 30px
+    display: block
+    .service-image
+      padding: 10px 0
+      img
+        width: 150px
+        height: 100px
+    .service-text
+      color: #ffffff
+      background: #6b6b6b
+      padding: 0 15px
+      height: 100px
+      text-align: center
+      display: flex
+      justify-content: center
+      flex-direction: column
+      border-radius: 0 0 14px 14px
+      @media screen and (max-width: 767px)
+        height: 90px
+      h3
+        margin-top: 0
+        font-size: 1.4em
+        font-weight: 500
+        margin-bottom: 7px
+      .article
+        font-size: 1.15em
+        margin: 0
+    &:hover, &:focus
+      text-decoration: none
+    &:hover
+      .service-text
+        background: #ee3f3f
+  .online-order
+    min-width: 400px
+    @media screen and (max-width: 480px)
+      min-width: auto
+
+
+section.stages
+  color: #ffffff
+  background: #ffffff url("../img/stages-bg.jpg") no-repeat 50%
+  background-size: cover
+  h2
+    margin-bottom: 15px
+  .sub-title
+    font-size: 1.7em
+    font-weight: 600
+    margin-bottom: 40px
+  .wrap
+    position: relative
+    .arrow
+      position: absolute
+      width: 80px
+      height: 25px
+      top: 30px
+      &.arrow-left
+        left: 0
+      &.arrow-right
+        right: -45px
+  .stage-item
+    margin-bottom: 20px
+    .stage-icon
+      width: 90px
+      height: 90px
+      border-radius: 50%
+      background: #ffffff
+      color: #e53645
+      font-size: 65px
+      margin: 0 auto 30px
+      line-height: 90px
+      i.fa-volume-control-phone
+        @include crossBrowser(transform, rotate(-45deg))
+    .description
+      font-weight: 600
+      font-size: 1.15em
+      line-height: 2
+
+section.portfolio
+  .portfolio-button
+    margin-bottom: 20px
+    border: 2px solid #f18486
+    border-radius: 20px
+    font-size: 1.15em
+    font-weight: 600
+    color: #515151
+    cursor: pointer
+    padding: 5px
+    height: 60px
+    text-align: center
+    display: flex
+    justify-content: center
+    flex-direction: column
+    &:hover, &.active
+      color: #ffffff
+      background: #515151
+      border-color: #515151
+  .portfolio-content
+    margin-top: 10px
+    text-align: left
+    margin-bottom: 30px
+    font-size: 1.15em
+    p
+      margin-bottom: 20px
+    .documents
+      font-size: 0
+      a
+        display: inline-block
+        width: 30%
+        position: relative
+        &:nth-child(n+4)
+          margin-top: 5%
+        &:nth-child(3n-1)
+          margin-left: 5%
+          margin-right: 5%
+        .darker
+          background: rgba(51, 51, 51, 0.4)
+          position: absolute
+          z-index: 100
+          left: 0
+          right: 0
+          top: 0
+          bottom: 0
+          @include crossBrowser(transition, .2s)
+          i
+            opacity: 0.6
+            position: absolute
+            left: 50%
+            margin-left: -18px
+            top: 50%
+            margin-top: -18px
+            font-size: 36px
+            color: #e12525
+            z-index: 101
+        &:hover
+          .darker
+            opacity: 0
+        img
+          width: 100%
+          height: 140px
+          border: 1px solid #efefef
+
+
+section.prices
+  border-top: 1px solid #515151
+  .sub-title
+    font-size: 1.42em
+    max-width: 750px
+    display: inline-block
+    margin-bottom: 50px
+    @media screen and (max-width: 767px)
+      margin-bottom: 10px
+  .price-item
+    margin: 20px 0
+    padding: 35px 15px
+    display: block
+    color: #333333
+    @include crossBrowser(box-shadow, 0 0 8px 2px rgba(0, 0, 0, 0.2))
+    .price-text-wrap
+      height: 110px
+      @media screen and (max-width: 767px)
+        height: 100px
+    h3, .worth
+      font-weight: 600
+      line-height: 1.5em
+      margin: 0
+    h3
+      font-size: 1.42em
+    .worth
+      font-size: 1.3em
+    h3
+      display: inline-block
+      max-width: 280px
+    .price-description
+      margin-top: 10px
+      font-size: 1.15em
+    .button
+      font-size: 1.15em
+      font-weight: 600
+      margin-top: 25px
+      background: #e52e2e
+      display: inline-block
+      padding: 8px 40px
+      border-radius: 8px
+      color: #ffffff
+    &:hover, &:focus
+      text-decoration: none
+    &:hover
+      .button
+        background: #44be44
+
+section.consultation
+  background: #f7f7f7
+  .advantages
+    text-align: left
+    h3
+      font-size: 1.42em
+      font-weight: 600
+      margin-bottom: 30px
+    .advantage-item
+      margin-bottom: 20px
+      .advantage-text
+        font-size: 1.3em
+        margin: 0 0 0 32px
+      i.fa
+        display: block
+        float: left
+        font-size: 1.7em
+        color: #00d400
+    .additional
+      font-size: 1.15em
+      font-weight: 600
+  .order-form
+    @media screen and (max-width: 991px)
+      margin: 20px auto 0
+
+section.map
+  padding-bottom: 0
+  margin-bottom: -4px
+  .map-wrap
+    position: relative
+    p
+      margin: 0
+    iframe
+      width: 100%
+      max-width: 1280px
+      height: 580px
+  .order-form
+    position: absolute
+    top: 120px
+    padding: 30px
+    @media screen and (max-width: 767px)
+      font-size: 1em
+      padding: 20px
+      form
+        padding: 0
+    font-size: 1.25em
+    h3
+      margin-top: 10px
+      font-size: 1.2em
+    form
+      padding: 20px 20px 0
+      .form-control
+        padding: 12px
+      .online-order
+        padding: 15px
+    .questions
+      margin-bottom: 20px
+      font-size: 1.2em
+
+.site-error
+  font-size: 3em
+  h2
+    text-align: center
+  a
+    color: #00a8ff
+    &:hover, &:focus, &:active
+      color: #00a8ff
